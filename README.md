@@ -13,18 +13,18 @@ Given that there are always a list of tests available for execution, we would li
 * A simple class which serves as the system under test
 * A list of tests (with just function headers) associated with the class
 
-## Use cases
+## Use case
 
-### Developer make a change to an existing function
-### git add .
-### git commit
-### Run a command to trigger the tool
-### Developer sees the list of tests generated to run against the code change
+* Developer make a change to an existing function
+* git add .
+* git commit
+* Run a command to trigger the tool
+* Developer sees the list of tests generated to run against the code change
 
 ## Implementatiom details
 
 ### The test analyser
-#### Something will analyse code based on git commit ID?
-#### Utilize AI/ML tooling to format each commit into a string
-#### Some data training is applied to
-##### Recognize relevance between commit and the list of tests
+* Analyse code based on git commit ID?
+* Utilize AI/ML tooling to format each commit into a string
+* Some data training is applied to
+  * Recognize relevance between commit and the list of tests
