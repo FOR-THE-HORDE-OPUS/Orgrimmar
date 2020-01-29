@@ -4,6 +4,10 @@
 
 It is challenging for developers to identify gaps in testing after code changes. Often developers do not know what existing tests are relevant to their changes.
 
+## The broader application
+
+Learn about how to provide automated feedback to developer based on code commits
+
 ## Objective
 
 Given that there are always a list of tests available for execution, we would like to experiment ways to tell developers which tests to run after code change through some level of AI.
@@ -15,7 +19,7 @@ Given that there are always a list of tests available for execution, we would li
 
 ## Use case
 
-* Developer make a change to an existing function
+* Developer make a change to existing code
 * git add .
 * git commit
 * Run a command to trigger the tool
@@ -32,5 +36,5 @@ Given that there are always a list of tests available for execution, we would li
 
 ### The training data
 
-### Restrictions
+### Limitations
 * It currently assumes that each commit is already pre-formatted into a string that be used as training data.
