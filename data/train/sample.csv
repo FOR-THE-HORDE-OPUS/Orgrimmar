@@ -5,7 +5,9 @@ commit_text,test_update_person_name,test_update_person_gender
 "test_update_person_age(): test_update_person_gender():",0,1
 "## Use case ### Developer make a change to an existing function",0,0
 "class Person: __init__(self, name): self.name = name",1,0
-
+"class Car: __init__(self): return",0,0
+"print_info(self): print(f"Name: {self.name}")",1,0
+"self.name = name",1,0
 
 
 
