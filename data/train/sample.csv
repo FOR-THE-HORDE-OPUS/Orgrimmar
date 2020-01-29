@@ -1,20 +1,20 @@
-commit_text,test_update_person_name,test_update_person_gender
+commit_text,test_update_person_name,test_get_car_owner
 "update_name(self, name): set_name(self, name):",1,0
-"set_gender(self, gender): self.gender = gender",0,1
+"set_gender(self, gender): self.gender = gender",0,0
 "set_address(self, address): self.address = address",0,0
-"test_update_person_age(): test_update_person_gender():",0,1
+"test_update_person_age(): test_update_person_gender():",0,0
 "## Use case ### Developer make a change to an existing function",0,0
 "class Person: __init__(self, name): self.name = name",1,0
-"class Car: __init__(self): return",0,0
+"class Car: __init__(self): return",0,1
 "print_info(self): print(f"Name: {self.name}")",1,0
 "self.name = name",1,0
 "is_registered(self): return self.reg.is_registered(self.name)",1,0
-"is_registered(self): return self.reg.is_registered(self.name, self.gender)",1,1
-"__init__(self, name, gender): self.name = name self.gender = gender",1,1
-"test_update_car_model(): return",0,0
+"is_registered(self): return self.reg.is_registered(self.name, self.gender)",1,0
+"__init__(self, name, gender): self.name = name self.gender = gender",1,0
+"test_update_car_model(): return",0,1
 "test_update_person_address(): return",0,0
 "test_update_person_name():",1,0
-"test_update_person_gender(): return",0,1
+"test_update_person_gender(): return",0,0
 "'test_update_person_age(): test_update_person_gender():',0,1 '## Use case ### Developer make a change to an existing function',0,0",0,0
 "find_school_in_area(self): school_finder.find_school_by_address(self.address)",0,0
 "set_name(self, name): self.name = name register_person(self.name)",1,0
@@ -22,10 +22,10 @@ commit_text,test_update_person_name,test_update_person_gender
 "--- a/data/train/sample.csv",0,0
 "+++ b/data/train/sample.csv",0,0
 "@@ -5,7 +5,9 @@ commit_text,test_update_person_name,test_update_person_gender",0,0
-"diff --git a/src/person.py b/src/person.py",1,1
-"--- a/src/person.py",1,1
-"+++ b/src/person.py",1,1
-"@@ -11,5 +11,8 @@ class Person:",1,1
+"diff --git a/src/person.py b/src/person.py",1,0
+"--- a/src/person.py",1,0
+"+++ b/src/person.py",1,0
+"@@ -11,5 +11,8 @@ class Person:",1,0
 "set_address(self, address):",0,0
 "self.address = address",0,0
 "find_school_in_area(self):",0,0
@@ -48,20 +48,32 @@ commit_text,test_update_person_name,test_update_person_gender
 "+### The training data",0,0
 "+### Restrictions",0,0
 "+* It currently assumes that each commit is already pre-formatted into a string that be used as training data.",0,0
-"diff --git a/src/car.py b/src/car.py",0,0
+"diff --git a/src/car.py b/src/car.py",0,1
 "--- /dev/null",0,0
-"+++ b/src/car.py",0,0
+"+++ b/src/car.py",0,1
 "@@ -0,0 +1,3 @@",0,0
-"+class Car:",0,0
+"+class Car:",0,1
 "+    def __init__(self):",0,0
 "+        return",0,0
-"diff --git a/src/person.py b/src/person.py",1,1
+"diff --git a/src/person.py b/src/person.py",1,0
 "index 9f4cd2b..bc41da2 100644",0,0
-"--- a/src/person.py",1,1
-"+++ b/src/person.py",1,1
-"@@ -10,3 +10,6 @@ class Person:",1,1
+"--- a/src/person.py",1,0
+"+++ b/src/person.py",1,0
+"@@ -10,3 +10,6 @@ class Person:",1,0
 "def set_address(self, address):",0,0
 "self.address = address",0,0
 "+",0,0
 "+    def print_info(self):",0,0
 "+        print(f"Name: {self.name}")",0,0
+"@@ -0,0 +1,2 @@",0,0
+"+def test_update_car_model():",0,1
+"+    return",0,0
+"diff --git a/tests/test_person.py b/tests/test_person.py",1,0
+"new file mode 100644",0,0
+"index 0000000..c6cdfe7",0,0
+"--- /dev/null",0,0
+"+++ b/tests/test_person.py",1,0
+"@@ -0,0 +1,6 @@",0,0
+"+def test_update_person_name():",1,0
+"+    return",0,0
+"+def test_update_person_age():",0,0
