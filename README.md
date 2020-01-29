@@ -24,7 +24,13 @@ Given that there are always a list of tests available for execution, we would li
 ## Implementatiom details
 
 ### The test analyser
-* Analyse code based on git commit ID?
+* Analyse code based on git commit locally
 * Utilize AI/ML tooling to format each commit into a string
+  * Each commit
 * Some data training is applied to
   * Recognize relevance between commit and the list of tests
+
+### The training data
+
+### Restrictions
+* It currently assumes that each commit is already pre-formatted into a string that be used as training data.
