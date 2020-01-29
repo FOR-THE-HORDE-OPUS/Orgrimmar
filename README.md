@@ -8,6 +8,10 @@ It is challenging for developers to identify gaps in testing after code changes.
 
 Given that there are always a list of tests available for execution, we would like to experiment ways to tell developers which tests to run after code change through some level of AI.
 
+## The broader application
+
+Learn about how to provide automated feedback to developer based on code commits
+
 ## The input
 
 * A simple class which serves as the system under test
@@ -15,7 +19,7 @@ Given that there are always a list of tests available for execution, we would li
 
 ## Use case
 
-* Developer make a change to an existing function
+* Developer make a change to existing code
 * git add .
 * git commit
 * Run a command to trigger the tool
@@ -23,8 +27,25 @@ Given that there are always a list of tests available for execution, we would li
 
 ## Implementatiom details
 
-### The test analyser
-* Analyse code based on git commit ID?
-* Utilize AI/ML tooling to format each commit into a string
-* Some data training is applied to
-  * Recognize relevance between commit and the list of tests
+### Libraries in use
+
+* gitpython
+* tensorflow
+
+### The tests analyser
+* Analyse code based on git commit locally
+  * The commit log (obtained via gitpython) is formatted into a strings that can be used as training data
+* Utilize AI/ML tooling for data training and prediction
+  * We use Keras RNN (Recurrent Neural Network) API of tensorflow in this exercise
+  * Data training is applied to recognize relevance between commits and the list of tests
+
+### The training data
+
+### Limitations
+* It currently assumes that each commit is already pre-formatted into a string that be used as training data.
+
+## Additional findings
+* Sample data needs to be large and diversified enough to produce more accurate predictions
+* With the actual source code experimented in the exercise, more different classes and methods under tests result in better prediction.
+
+
