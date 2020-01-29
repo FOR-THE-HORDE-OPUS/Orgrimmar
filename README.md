@@ -10,8 +10,8 @@ Given that there are always a list of tests available for execution, we would li
 
 ## The input
 
-* A simple class which serves as the system under test
-* A list of tests (with just function headers) associated with the class
+* Two simple classes which serve as the system under test
+* A list of tests (with just function headers) associated with the classes
 
 ## Use case
 
