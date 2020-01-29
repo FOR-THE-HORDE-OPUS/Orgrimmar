@@ -1,9 +1,11 @@
 commit_text,test_update_person_name,test_update_person_gender
-"instance=Person() person.update_name('Mike')",1,0
-"sample=Person() sample.name='Alice'",1,0
-"per=Person() per.set_gender('Male')",0,1
-"wow=Person() wow.set_gender('female')",0,1
-"tet=Person() test.gender='female'",0,1
+"update_name(self, name): set_name(self, name):",1,0
+"set_gender(self, gender): self.gender = gender",0,1
+"set_address(self, address): self.address = address",0,0
+"test_update_person_age(): test_update_person_gender():",0,1
+"## Use case ### Developer make a change to an existing function",0,0
+"class Person: __init__(self, name): self.name = name",1,0
+
 
 
 
