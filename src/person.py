@@ -10,3 +10,6 @@ class Person:
 
     def set_address(self, address):
         self.address = address
+
+    def print_info(self):
+        print(f"Name: {self.name}")
